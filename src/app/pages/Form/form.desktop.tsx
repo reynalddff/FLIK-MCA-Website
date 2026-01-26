@@ -1,6 +1,4 @@
 import { useState, FormEvent } from "react";
-import Navbar from "/Users/reynalddaffa/Downloads/FLIK MCA Website/src/imports/navbar.tsx";
-import Footer from "/Users/reynalddaffa/Downloads/FLIK MCA Website/src/imports/footer.tsx";
 
 function Title() {
   return (
@@ -57,17 +55,35 @@ export default function FormsPage() {
 
   const [errors, setErrors] = useState<FormErrors>({});
   const [touched, setTouched] = useState<{ [K in keyof FormData]?: boolean }>(
-    {}
+    {},
   );
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState("");
+
+  const formatSubmittedDate = (date: Date) => {
+    const formatter = new Intl.DateTimeFormat("en-GB", {
+      timeZone: "Asia/Jakarta",
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: false,
+    });
+    const parts = formatter.formatToParts(date);
+    const get = (type: Intl.DateTimeFormatPartTypes) =>
+      parts.find((part) => part.type === type)?.value ?? "";
+    return `${get("day")} / ${get("month")} / ${get("year")} - ${get(
+      "hour",
+    )} : ${get("minute")}`;
+  };
 
   const validateField = (name: keyof FormData, value: string): string => {
     switch (name) {
       case "fullName":
         if (!value.trim()) return "Nama lengkap wajib diisi";
-        if (value.trim().length < 3)
-          return "Nama lengkap minimal 3 karakter";
+        if (value.trim().length < 3) return "Nama lengkap minimal 3 karakter";
         return "";
 
       case "businessName":
@@ -92,8 +108,7 @@ export default function FormsPage() {
 
       case "helpNeeded":
         if (!value.trim()) return "Mohon jelaskan apa yang bisa FLIK bantu";
-        if (value.trim().length < 30)
-          return "Deskripsi minimal 30 karakter";
+        if (value.trim().length < 30) return "Deskripsi minimal 30 karakter";
         if (value.trim().length > 1000)
           return "Deskripsi maksimal 1000 karakter";
         return "";
@@ -104,7 +119,7 @@ export default function FormsPage() {
   };
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -116,7 +131,9 @@ export default function FormsPage() {
     }
   };
 
-  const handleBlur = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleBlur = (
+    e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     const { name, value } = e.target;
     setTouched((prev) => ({ ...prev, [name]: true }));
     const error = validateField(name as keyof FormData, value);
@@ -125,6 +142,8 @@ export default function FormsPage() {
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+
+    console.log("Form data:", formData);
 
     // Validate all fields
     const newErrors: FormErrors = {};
@@ -153,13 +172,29 @@ export default function FormsPage() {
     }
 
     setIsSubmitting(true);
+    setSubmitError("");
 
-    // Simulate form submission
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      console.log("Form submitted:", formData);
+      const submittedDate = formatSubmittedDate(new Date());
+      const payload = new URLSearchParams({
+        "Full name": formData.fullName,
+        "Business Name": formData.businessName,
+        "Help Needed": formData.helpNeeded,
+        Link: formData.website,
+        "Phone Number": formData.phoneNumber,
+        "Referral Source": formData.referralSource,
+        "Submitted Date": submittedDate,
+      });
+
+      await fetch("https://hooks.zapier.com/hooks/catch/26163917/uq8s0rw/", {
+        method: "POST",
+        mode: "no-cors",
+        body: payload,
+      });
+
       setSubmitSuccess(true);
-      
+      window.scrollTo({ top: 0, behavior: "smooth" });
+
       // Reset form after success
       setTimeout(() => {
         setFormData({
@@ -172,9 +207,14 @@ export default function FormsPage() {
         });
         setTouched({});
         setSubmitSuccess(false);
-      }, 3000);
+      }, 5000);
     } catch (error) {
       console.error("Form submission error:", error);
+      setSubmitError("Maaf, terjadi kesalahan. Silahkan coba kembali.");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      setTimeout(() => {
+        setSubmitError("");
+      }, 5000);
     } finally {
       setIsSubmitting(false);
     }
@@ -185,8 +225,6 @@ export default function FormsPage() {
       className="bg-white content-stretch flex flex-col items-start relative size-full"
       data-name="Forms"
     >
-      <Navbar />
-
       <div
         className="content-stretch flex flex-col gap-[60px] items-center justify-center pb-0 pt-[60px] px-0 relative shrink-0 w-full"
         data-name="Body"
@@ -204,6 +242,17 @@ export default function FormsPage() {
           >
             <div className="flex flex-col items-end justify-center max-w-[inherit] size-full">
               <div className="content-stretch flex flex-col gap-[40px] items-end justify-center max-w-[inherit] p-[40px] relative w-full">
+                {submitSuccess ? (
+                  <div className="w-full rounded-[10px] border border-green-200 bg-green-50 px-[16px] py-[12px] text-[14px] text-green-700">
+                    Yeay! Pesan kamu berhasil terkirim. Tim kami segera
+                    menghubungi kamu.
+                  </div>
+                ) : null}
+                {submitError ? (
+                  <div className="w-full rounded-[10px] border border-red-200 bg-red-50 px-[16px] py-[12px] text-[14px] text-red-700">
+                    {submitError}
+                  </div>
+                ) : null}
                 {/* Full Name Field */}
                 <div
                   className="content-stretch flex flex-col gap-[8px] items-start relative shrink-0 w-full"
@@ -477,17 +526,20 @@ export default function FormsPage() {
                     submitSuccess
                       ? "bg-green-600 cursor-default"
                       : isSubmitting
-                      ? "bg-[#9D67E0] cursor-wait"
-                      : "bg-[#701bc1] cursor-pointer hover:bg-[#4A1280]"
+                        ? "bg-[#9D67E0] cursor-wait"
+                        : "bg-[#701bc1] cursor-pointer hover:bg-[#4A1280]"
                   }`}
                   data-name="Button"
                 >
+                  {isSubmitting ? (
+                    <span className="mr-[8px] inline-flex size-[16px] animate-spin rounded-full border-2 border-white border-t-transparent" />
+                  ) : null}
                   <p className="font-w500 leading-[1.5] not-italic relative shrink-0 text-[16px] text-white whitespace-pre">
                     {submitSuccess
                       ? "Terkirim! ✓"
                       : isSubmitting
-                      ? "Mengirim..."
-                      : "Kirim ke FLIK →"}
+                        ? "Mengirim..."
+                        : "Kirim ke FLIK →"}
                   </p>
                 </button>
               </div>
@@ -495,8 +547,6 @@ export default function FormsPage() {
           </form>
         </div>
       </div>
-
-      <Footer />
     </div>
   );
 }

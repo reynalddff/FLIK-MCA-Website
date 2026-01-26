@@ -1,12 +1,12 @@
-import Navbar from "./navbar";
-import Footer from "./footer";
-import CTASection from "./cta-section";
+import Navbar from "../../components/navbar";
+import Footer from "../../components/footer";
+import CTASection from "../../components/cta-section";
 
-import svgPaths from "./svg-q92kolgqwo";
-import imgImage8 from "/Users/reynalddaffa/Downloads/FLIK MCA Website/src/assets/TentangFLIK-02.png";
-import imgImage9 from "/Users/reynalddaffa/Downloads/FLIK MCA Website/src/assets/TentangFLIK-03.png";
-import imgImage7 from "/Users/reynalddaffa/Downloads/FLIK MCA Website/src/assets/TentangFLIK-01.png";
-import imgMcaPageHeroSection1 from "/Users/reynalddaffa/Downloads/FLIK MCA Website/src/assets/TentangFLIK-04.png";
+import svgPaths from "../../../imports/svg-q92kolgqwo";
+import imgImage8 from "../../../assets/TentangFLIK-02.png";
+import imgImage9 from "../../../assets/TentangFLIK-03.png";
+import imgImage7 from "../../../assets/TentangFLIK-01.png";
+import imgMcaPageHeroSection1 from "../../../assets/TentangFLIK-04.png";
 
 function Title() {
   return (
@@ -14,17 +14,20 @@ function Title() {
       className="content-stretch flex gap-[60px] items-end max-w-[1080px] not-italic relative shrink-0 text-[#111928] w-full whitespace-pre-wrap"
       data-name="Title"
     >
-      <p className="capitalize font-['Satoshi:Medium',sans-serif] leading-[1.4] relative shrink-0 text-[40px] tracking-[-1px] w-[540px]"
-      style={{ fontFamily: "'Satoshi', sans-serif", fontWeight: 500 }}>
+      <p
+        className="capitalize font-['Satoshi:Medium',sans-serif] leading-[1.4] relative shrink-0 text-[40px] tracking-[-1px] w-[540px]"
+        style={{ fontFamily: "'Satoshi', sans-serif", fontWeight: 500 }}
+      >
         {`Melalui Pendekatan `}
         <br aria-hidden="true" />
         yang Lebih Tenang
       </p>
-      <p className="flex-[1_0_0] font-['Satoshi:Regular',sans-serif] leading-[1.5] min-h-px min-w-px relative text-[18px]"
-      style={{ fontFamily: "'Satoshi', sans-serif", fontWeight: 400 }}>
-        Berangkat dari pemahaman bahwa bisnis tidak selalu
-        stabil, dan keputusan terbaik perlu diambil dengan
-        kepastian dan penuh atas kendali.
+      <p
+        className="flex-[1_0_0] font-['Satoshi:Regular',sans-serif] leading-[1.5] min-h-px min-w-px relative text-[18px]"
+        style={{ fontFamily: "'Satoshi', sans-serif", fontWeight: 400 }}
+      >
+        Berangkat dari pemahaman bahwa bisnis tidak selalu stabil, dan keputusan
+        terbaik perlu diambil dengan kepastian dan penuh atas kendali.
       </p>
     </div>
   );
@@ -86,30 +89,27 @@ function Title1() {
       className="content-stretch flex items-end relative shrink-0 w-full"
       data-name="Title"
     >
-      <p className="flex-[1_0_0] leading-[1.7] min-h-px min-w-px not-italic relative text-[#111928] text-[18px] whitespace-pre-wrap text-justify"
-      style={{ fontFamily: "'Satoshi', sans-serif", fontWeight: 400 }}>
-        FLIK dibangun dari pemahaman mendalam bahwa perjalanan
-        bisnis sering kali tidak berjalan lurus dan stabil.
-        Dalam dunia yang dinamis ini, terdapat fase-fase ketika
-        operasional memerlukan perhatian lebih, keputusan harus
-        diambil dengan cepat dan tepat, serta ruang gerak
-        menjadi semakin penting untuk kelangsungan usaha. Dalam
-        kondisi seperti ini, banyak bisnis tidak memerlukan
-        perubahan besar atau solusi yang memaksa, melainkan
-        pendekatan yang lebih tenang dan relevan dengan ritme
-        yang sedang dijalani. Pendekatan FLIK berangkat dari
-        cara kerja bisnis yang sudah ada, dengan tujuan untuk
-        menyesuaikan diri dengan konteks masing-masing usaha.
-        Kami memahami bahwa kebutuhan bisnis dapat naik dan
-        turun seiring berjalannya waktu, dan kami siap untuk
-        beradaptasi dengan perubahan tersebut. Fokus kami adalah
-        membantu bisnis menjaga momentum yang telah dibangun,
-        tetap memiliki fleksibilitas dalam mengelola kebutuhan
-        operasional, serta mengambil keputusan yang tepat tanpa
-        kehilangan kendali atau menambah beban yang tidak perlu.
-        Dengan FLIK, kami berkomitmen untuk menjadi mitra yang
-        dapat diandalkan dalam setiap langkah perjalanan bisnis
-        Anda.
+      <p
+        className="flex-[1_0_0] leading-[1.7] min-h-px min-w-px not-italic relative text-[#111928] text-[18px] whitespace-pre-wrap text-justify"
+        style={{ fontFamily: "'Satoshi', sans-serif", fontWeight: 400 }}
+      >
+        FLIK dibangun dari pemahaman mendalam bahwa perjalanan bisnis sering
+        kali tidak berjalan lurus dan stabil. Dalam dunia yang dinamis ini,
+        terdapat fase-fase ketika operasional memerlukan perhatian lebih,
+        keputusan harus diambil dengan cepat dan tepat, serta ruang gerak
+        menjadi semakin penting untuk kelangsungan usaha. Dalam kondisi seperti
+        ini, banyak bisnis tidak memerlukan perubahan besar atau solusi yang
+        memaksa, melainkan pendekatan yang lebih tenang dan relevan dengan ritme
+        yang sedang dijalani. Pendekatan FLIK berangkat dari cara kerja bisnis
+        yang sudah ada, dengan tujuan untuk menyesuaikan diri dengan konteks
+        masing-masing usaha. Kami memahami bahwa kebutuhan bisnis dapat naik dan
+        turun seiring berjalannya waktu, dan kami siap untuk beradaptasi dengan
+        perubahan tersebut. Fokus kami adalah membantu bisnis menjaga momentum
+        yang telah dibangun, tetap memiliki fleksibilitas dalam mengelola
+        kebutuhan operasional, serta mengambil keputusan yang tepat tanpa
+        kehilangan kendali atau menambah beban yang tidak perlu. Dengan FLIK,
+        kami berkomitmen untuk menjadi mitra yang dapat diandalkan dalam setiap
+        langkah perjalanan bisnis Anda.
       </p>
     </div>
   );
@@ -129,10 +129,7 @@ function Description() {
 
 function CheckCircle() {
   return (
-    <div
-      className="relative shrink-0 size-[24px]"
-      data-name="CheckCircle"
-    >
+    <div className="relative shrink-0 size-[24px]" data-name="CheckCircle">
       <svg
         className="block size-full"
         fill="none"
@@ -164,8 +161,10 @@ function Point() {
       data-name="Point"
     >
       <CheckCircle />
-      <p className="flex-[1_0_0] leading-[1.6] min-h-px min-w-px not-italic relative text-[#111928] text-[18px] whitespace-pre-wrap"
-      style={{ fontFamily: "'Satoshi', sans-serif", fontWeight: 400 }}>
+      <p
+        className="flex-[1_0_0] leading-[1.6] min-h-px min-w-px not-italic relative text-[#111928] text-[18px] whitespace-pre-wrap"
+        style={{ fontFamily: "'Satoshi', sans-serif", fontWeight: 400 }}
+      >
         Fokus ke bisnis dengan operasional yang sudah autopilot.
       </p>
     </div>
@@ -174,10 +173,7 @@ function Point() {
 
 function CheckCircle1() {
   return (
-    <div
-      className="relative shrink-0 size-[24px]"
-      data-name="CheckCircle"
-    >
+    <div className="relative shrink-0 size-[24px]" data-name="CheckCircle">
       <svg
         className="block size-full"
         fill="none"
@@ -209,8 +205,10 @@ function Point1() {
       data-name="Point"
     >
       <CheckCircle1 />
-      <p className="flex-[1_0_0] leading-[1.6] min-h-px min-w-px not-italic relative text-[#111928] text-[18px] whitespace-pre-wrap"
-      style={{ fontFamily: "'Satoshi', sans-serif", fontWeight: 400 }}>
+      <p
+        className="flex-[1_0_0] leading-[1.6] min-h-px min-w-px not-italic relative text-[#111928] text-[18px] whitespace-pre-wrap"
+        style={{ fontFamily: "'Satoshi', sans-serif", fontWeight: 400 }}
+      >
         Tanpa perubahan atau pengurangan kepemilikan saham.
       </p>
     </div>
@@ -219,10 +217,7 @@ function Point1() {
 
 function CheckCircle2() {
   return (
-    <div
-      className="relative shrink-0 size-[24px]"
-      data-name="CheckCircle"
-    >
+    <div className="relative shrink-0 size-[24px]" data-name="CheckCircle">
       <svg
         className="block size-full"
         fill="none"
@@ -254,8 +249,10 @@ function Point2() {
       data-name="Point"
     >
       <CheckCircle2 />
-      <p className="flex-[1_0_0] leading-[1.6] min-h-px min-w-px not-italic relative text-[#111928] text-[18px] whitespace-pre-wrap"
-      style={{ fontFamily: "'Satoshi', sans-serif", fontWeight: 400 }}>
+      <p
+        className="flex-[1_0_0] leading-[1.6] min-h-px min-w-px not-italic relative text-[#111928] text-[18px] whitespace-pre-wrap"
+        style={{ fontFamily: "'Satoshi', sans-serif", fontWeight: 400 }}
+      >
         Tanpa bunga atau biaya tersembunyi.
       </p>
     </div>
@@ -264,10 +261,7 @@ function Point2() {
 
 function CheckCircle3() {
   return (
-    <div
-      className="relative shrink-0 size-[24px]"
-      data-name="CheckCircle"
-    >
+    <div className="relative shrink-0 size-[24px]" data-name="CheckCircle">
       <svg
         className="block size-full"
         fill="none"
@@ -299,8 +293,10 @@ function Point3() {
       data-name="Point"
     >
       <CheckCircle3 />
-      <p className="flex-[1_0_0] leading-[1.6] min-h-px min-w-px not-italic relative text-[#111928] text-[18px] whitespace-pre-wrap"
-      style={{ fontFamily: "'Satoshi', sans-serif", fontWeight: 400 }}>
+      <p
+        className="flex-[1_0_0] leading-[1.6] min-h-px min-w-px not-italic relative text-[#111928] text-[18px] whitespace-pre-wrap"
+        style={{ fontFamily: "'Satoshi', sans-serif", fontWeight: 400 }}
+      >
         Menyesuaikan kondisi cashflow yang naik dan turun.
       </p>
     </div>
@@ -327,16 +323,20 @@ function Content() {
       className="content-stretch flex flex-[1_0_0] flex-col gap-[24px] items-start min-h-px min-w-px relative"
       data-name="Content"
     >
-      <p className="capitalize leading-[1.4] not-italic relative shrink-0 text-[#111928] text-[40px] tracking-[-1px] w-full whitespace-pre-wrap"
-      style={{ fontFamily: "'Satoshi', sans-serif", fontWeight: 500 }}>
+      <p
+        className="capitalize leading-[1.4] not-italic relative shrink-0 text-[#111928] text-[40px] tracking-[-1px] w-full whitespace-pre-wrap"
+        style={{ fontFamily: "'Satoshi', sans-serif", fontWeight: 500 }}
+      >
         {`bertumbuh tanpa `}
         <br aria-hidden="true" />
         kehilangan kendali
       </p>
-      <p className="leading-[1.6] not-italic relative shrink-0 text-[#111928] text-[18px] w-full whitespace-pre-wrap"
-      style={{ fontFamily: "'Satoshi', sans-serif", fontWeight: 400 }}>
-        Dirancang untuk menjaga ritme, keputusan, dan arus tetap
-        seimbang saat kebutuhan dan peluang terus bertambah.
+      <p
+        className="leading-[1.6] not-italic relative shrink-0 text-[#111928] text-[18px] w-full whitespace-pre-wrap"
+        style={{ fontFamily: "'Satoshi', sans-serif", fontWeight: 400 }}
+      >
+        Dirancang untuk menjaga ritme, keputusan, dan arus tetap seimbang saat
+        kebutuhan dan peluang terus bertambah.
       </p>
       <Points />
     </div>
@@ -398,15 +398,13 @@ function Body() {
   );
 }
 
-export default function TentangFlik() {
+export default function AboutPage() {
   return (
     <div
       className="bg-white content-stretch flex flex-col items-start relative size-full"
       data-name="Tentang FLIK"
     >
-      <Navbar />
       <Body />
-      <Footer />
     </div>
   );
 }

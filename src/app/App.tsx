@@ -5,25 +5,19 @@ import {
   useNavigate,
 } from "react-router-dom";
 
-import LandingPage from "../imports/LandingPage";
-import TentangFlik from "../imports/TentangFlik";
-import MerchantKami from "../imports/MerchantKami";
-import FormsPage from "../app/pages/FormsPage";
-import MerchantDetailPage from "../app/pages/MerchantDetailPage";
+import LandingPage from "../app/pages/Home/Homepage";
+import TentangFlik from "../app/pages/About/About";
+import MerchantKami from "../app/pages/Merchant/Merchant";
+import FormsPage from "../app/pages/Form/Form";
+import MerchantDetailPage from "./pages/Merchant/Detail";
 
 export default function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<LandingPageWithNav />} />
-        <Route
-          path="/tentang-flik"
-          element={<TentangFlikWithNav />}
-        />
-        <Route
-          path="/merchant-kami"
-          element={<MerchantKamiWithNav />}
-        />
+        <Route path="/tentang-flik" element={<TentangFlikWithNav />} />
+        <Route path="/merchant" element={<MerchantKamiWithNav />} />
         <Route path="/merchant/:slug" element={<MerchantDetailPage />} />
         <Route path="/forms" element={<FormsPage />} />
       </Routes>
@@ -66,7 +60,7 @@ function LandingPageWithNavigation({
           target.textContent?.includes("Cerita Merchant")
         ) {
           e.preventDefault();
-          navigate("/merchant-kami");
+          navigate("/merchant");
         } else if (
           target.closest('[data-name="Nav"]') &&
           target.textContent?.includes("Tentang FLIK")
@@ -90,7 +84,7 @@ function LandingPageWithNavigation({
         // card purple on landing page
         else if (target.closest('[data-name="Card-Purple"]')) {
           e.preventDefault();
-          navigate("/merchant-kami");
+          navigate("/merchant");
         }
       }}
     >
@@ -118,7 +112,7 @@ function TentangFlikWithNavigation({
           target.textContent?.includes("Cerita Merchant")
         ) {
           e.preventDefault();
-          navigate("/merchant-kami");
+          navigate("/merchant");
         }
         // Logo click
         else if (target.closest('[data-name="Logo"]')) {

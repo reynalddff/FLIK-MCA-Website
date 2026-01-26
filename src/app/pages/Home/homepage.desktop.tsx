@@ -1,13 +1,15 @@
-import Navbar from "./navbar";
-import Footer from "./footer";
-import CTASection from "./cta-section";
-import Button from "../app/components/flik-button";
+import { Link } from "react-router-dom";
 
-import svgPaths from "./svg-yaeic72sto";
+import Navbar from "../../components/navbar";
+import Footer from "../../components/footer";
+import CTASection from "../../components/cta-section";
+import Button from "../../components/flik-button";
 
-import imgContentImage from "/Users/reynalddaffa/Downloads/FLIK MCA Website/src/assets/ImageThumbnailEmados.png";
-import imgContentImage1 from "/Users/reynalddaffa/Downloads/FLIK MCA Website/src/assets/ImageThumbnailHeylocal.png";
-import imgContentImage2 from "/Users/reynalddaffa/Downloads/FLIK MCA Website/src/assets/ImageThumbnailErigo.png";
+import svgPaths from "../../../imports/svg-yaeic72sto";
+
+import imgContentImage from "../../../assets/ImageThumbnailEmados.png";
+import imgContentImage1 from "../../../assets/ImageThumbnailHeylocal.png";
+import imgContentImage2 from "../../../assets/ImageThumbnailErigo.png";
 
 function Buttons() {
   return (
@@ -15,17 +17,9 @@ function Buttons() {
       className="content-stretch flex gap-[20px] items-start relative shrink-0 w-full"
       data-name="Buttons"
     >
-      <Button
-        variant="primary"
-        label="Ceritakan Kebutuhanmu"
-        to="/forms"
-      />
+      <Button variant="primary" label="Ceritakan Kebutuhanmu" to="/forms" />
 
-      <Button
-        variant="secondary"
-        label="Tentang FLIK"
-        to="/tentang-flik"
-      />
+      <Button variant="secondary" label="Tentang FLIK" to="/tentang-flik" />
     </div>
   );
 }
@@ -36,11 +30,12 @@ function HeroDescriptionContainer() {
       className="content-stretch flex flex-col gap-[40px] items-start relative shrink-0 w-[500px]"
       data-name="Hero description container"
     >
-      <p className="leading-[1.6] not-italic relative shrink-0 text-[#111928] text-[18px] tracking-[-0.2px] w-full whitespace-pre-wrap" 
-      style={{ fontFamily: "'Satoshi', sans-serif", fontWeight: 400 }}>
-        Membantu bisnis untuk tetap memiliki ruang untuk
-        bergerak dan beradaptasi di tengah berbagai kebutuhan
-        operasional.
+      <p
+        className="leading-[1.6] not-italic relative shrink-0 text-[#111928] text-[18px] tracking-[-0.2px] w-full whitespace-pre-wrap"
+        style={{ fontFamily: "'Satoshi', sans-serif", fontWeight: 400 }}
+      >
+        Membantu bisnis untuk tetap memiliki ruang untuk bergerak dan
+        beradaptasi di tengah berbagai kebutuhan operasional.
       </p>
       <Buttons />
     </div>
@@ -53,8 +48,10 @@ function Content() {
       className="content-stretch flex flex-[1_0_0] gap-[40px] items-start min-h-px min-w-px relative"
       data-name="Content"
     >
-      <div className="capitalize leading-[1.4] not-italic relative shrink-0 text-[#111928] text-[40px] tracking-[-1px] w-[540px] whitespace-pre-wrap"
-      style={{ fontFamily: "'Satoshi', sans-serif", fontWeight: 500 }}>
+      <div
+        className="capitalize leading-[1.4] not-italic relative shrink-0 text-[#111928] text-[40px] tracking-[-1px] w-[540px] whitespace-pre-wrap"
+        style={{ fontFamily: "'Satoshi', sans-serif", fontWeight: 500 }}
+      >
         <p className="mb-0">
           {`Menjaga momentum, `}
           <br aria-hidden="true" />
@@ -80,10 +77,7 @@ function Hero() {
 
 function ArrowCircleRight() {
   return (
-    <div
-      className="relative shrink-0 size-[48px]"
-      data-name="ArrowCircleRight"
-    >
+    <div className="relative shrink-0 size-[48px]" data-name="ArrowCircleRight">
       <svg
         className="block size-full"
         fill="none"
@@ -108,10 +102,12 @@ function ContentDescriptionContainer() {
       className="content-stretch flex flex-col items-start relative shrink-0 w-full"
       data-name="Content description container"
     >
-      <p className="leading-[1.25] not-italic relative shrink-0 text-[30px] text-white tracking-[-0.96px] w-full whitespace-pre-wrap"
-      style={{fontFamily: "'Satoshi', sans-serif", fontWeight: 500}}>
-        Mendukung pembukaan 30+ cabang EMADO’S di seluruh
-        Indonesia dengan operasional yang tetap terkendali.
+      <p
+        className="leading-[1.25] not-italic relative shrink-0 text-[30px] text-white tracking-[-0.96px] w-full whitespace-pre-wrap"
+        style={{ fontFamily: "'Satoshi', sans-serif", fontWeight: 500 }}
+      >
+        Mendukung pembukaan 30+ cabang EMADO’S di seluruh Indonesia dengan
+        operasional yang tetap terkendali.
       </p>
     </div>
   );
@@ -133,9 +129,10 @@ function Text() {
 
 function ContentImage() {
   return (
-    <div
+    <a
       className="content-stretch flex flex-[1_0_0] h-[500px] items-end justify-end min-h-px min-w-px overflow-hidden relative group cursor-pointer"
       data-name="Content image"
+      href="/merchant/emados"
     >
       <div aria-hidden="true" className="absolute inset-0">
         <img
@@ -146,16 +143,13 @@ function ContentImage() {
         <div className="absolute bg-[rgba(0,0,0,0.1)] inset-0" />
       </div>
       <Text />
-    </div>
+    </a>
   );
 }
 
 function ArrowCircleRight1() {
   return (
-    <div
-      className="relative shrink-0 size-[48px]"
-      data-name="ArrowCircleRight"
-    >
+    <div className="relative shrink-0 size-[48px]" data-name="ArrowCircleRight">
       <svg
         className="block size-full"
         fill="none"
@@ -180,10 +174,12 @@ function ContentDescriptionContainer1() {
       className="content-stretch flex flex-col items-start relative shrink-0 w-full"
       data-name="Content description container"
     >
-      <p className="leading-[1.25] not-italic relative shrink-0 text-[30px] text-white tracking-[-0.96px] w-full whitespace-pre-wrap"
-      style={{fontFamily: "'Satoshi', sans-serif", fontWeight: 500}}>
-        Mendukung persediaan stok HEYLOCAL untuk melayani
-        500.000+ transaksi saat peak season.
+      <p
+        className="leading-[1.25] not-italic relative shrink-0 text-[30px] text-white tracking-[-0.96px] w-full whitespace-pre-wrap"
+        style={{ fontFamily: "'Satoshi', sans-serif", fontWeight: 500 }}
+      >
+        Mendukung persediaan stok HEYLOCAL untuk melayani 500.000+ transaksi
+        saat peak season.
       </p>
     </div>
   );
@@ -205,9 +201,10 @@ function Text1() {
 
 function ContentImage1() {
   return (
-    <div
+    <a
       className="content-stretch flex flex-[1_0_0] h-[500px] items-end justify-end min-h-px min-w-px overflow-hidden relative group cursor-pointer"
       data-name="Content image"
+      href="/merchant/heylocal"
     >
       <div aria-hidden="true" className="absolute inset-0">
         <img
@@ -218,7 +215,7 @@ function ContentImage1() {
         <div className="absolute bg-[rgba(0,0,0,0.1)] inset-0" />
       </div>
       <Text1 />
-    </div>
+    </a>
   );
 }
 
@@ -236,10 +233,7 @@ function ContentRow() {
 
 function ArrowCircleRight2() {
   return (
-    <div
-      className="relative shrink-0 size-[48px]"
-      data-name="ArrowCircleRight"
-    >
+    <div className="relative shrink-0 size-[48px]" data-name="ArrowCircleRight">
       <svg
         className="block size-full"
         fill="none"
@@ -264,10 +258,12 @@ function ContentDescriptionContainer2() {
       className="content-stretch flex flex-col items-start relative shrink-0 w-full"
       data-name="Content description container"
     >
-      <p className="leading-[1.25] not-italic relative shrink-0 text-[30px] text-white tracking-[-0.96px] w-full whitespace-pre-wrap"
-      style={{fontFamily: "'Satoshi', sans-serif", fontWeight: 500}}>
-        Menjaga stok ERIGO sehingga dapat mendorong penjualan
-        hingga 200% di online dan offline store.
+      <p
+        className="leading-[1.25] not-italic relative shrink-0 text-[30px] text-white tracking-[-0.96px] w-full whitespace-pre-wrap"
+        style={{ fontFamily: "'Satoshi', sans-serif", fontWeight: 500 }}
+      >
+        Menjaga stok ERIGO sehingga dapat mendorong penjualan hingga 200% di
+        online dan offline store.
       </p>
     </div>
   );
@@ -289,9 +285,10 @@ function Text2() {
 
 function ContentImage2() {
   return (
-    <div
+    <a
       className="content-stretch flex flex-[1_0_0] h-[500px] items-end justify-end min-h-px min-w-px overflow-hidden relative group cursor-pointer"
       data-name="Content image"
+      href="/merchant/erigo"
     >
       <img
         alt=""
@@ -299,16 +296,13 @@ function ContentImage2() {
         src={imgContentImage2}
       />
       <Text2 />
-    </div>
+    </a>
   );
 }
 
 function ArrowCircleRight3() {
   return (
-    <div
-      className="relative shrink-0 size-[48px]"
-      data-name="ArrowCircleRight"
-    >
+    <div className="relative shrink-0 size-[48px]" data-name="ArrowCircleRight">
       <svg
         className="block size-full"
         fill="none"
@@ -335,8 +329,10 @@ function Text3() {
     >
       <div className="content-stretch flex flex-col items-start justify-between p-[60px] relative size-full p-[40px] cursor-pointer transition-colors duration-300 hover:bg-[#4A1280]">
         <ArrowCircleRight3 />
-        <p className="leading-[1.25] min-w-full not-italic relative shrink-0 text-[30px] text-white tracking-[-0.5px] w-[min-content] whitespace-pre-wrap"
-        style={{fontFamily: "'Satoshi', sans-serif", fontWeight: 500}}>
+        <p
+          className="leading-[1.25] min-w-full not-italic relative shrink-0 text-[30px] text-white tracking-[-0.5px] w-[min-content] whitespace-pre-wrap"
+          style={{ fontFamily: "'Satoshi', sans-serif", fontWeight: 500 }}
+        >
           Lihat cerita merchant
           <br aria-hidden="true" />
           lainnya, disini.
@@ -348,12 +344,12 @@ function Text3() {
 
 function ContentImage3() {
   return (
-    <div
+    <a
       className="bg-[#701bc1] content-stretch flex flex-[1_0_0] h-[500px] items-end justify-end min-h-px min-w-px relative"
       data-name="Content image"
     >
       <Text3 />
-    </div>
+    </a>
   );
 }
 
@@ -401,15 +397,15 @@ function Body() {
   );
 }
 
-export default function LandingPage() {
+const LandingPageDesktop = () => {
   return (
     <div
       className="bg-white content-stretch flex flex-col items-start relative size-full"
       data-name="Landing Page"
     >
-      <Navbar />
       <Body />
-      <Footer />
     </div>
   );
-}
+};
+
+export default LandingPageDesktop;

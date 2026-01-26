@@ -1,15 +1,15 @@
-import Navbar from "/Users/reynalddaffa/Downloads/FLIK MCA Website/src/imports/navbar.tsx";
-import Footer from "/Users/reynalddaffa/Downloads/FLIK MCA Website/src/imports/footer.tsx";
-import CTAButton from "../app/components/flik-button";
+import Navbar from "../../components/navbar";
+import Footer from "../../components/footer";
+import CTAButton from "../../components/flik-button";
 
 import { Link } from "react-router-dom";
-import svgPaths from "./svg-x9wdmk33ce";
+import svgPaths from "../../../imports/svg-x9wdmk33ce";
 
-import imgImage from "../../src/assets/ImageThumbnailEmados.png";
-import imgImage9 from "/Users/reynalddaffa/Downloads/FLIK MCA Website/src/assets/ImageThumbnailErigo.png";
-import imgImage1 from "/Users/reynalddaffa/Downloads/FLIK MCA Website/src/assets/ImageThumbnailHeylocal.png";
-import imgImage2 from "/Users/reynalddaffa/Downloads/FLIK MCA Website/src/assets/ImageThumbnailBegor.png";
-import imgImage10 from "/Users/reynalddaffa/Downloads/FLIK MCA Website/src/assets/ImageThumbnailJokopi.png";
+import imageEmados from "../../../assets/ImageThumbnailEmados.png";
+import imageHeylocal from "../../../assets/ImageThumbnailHeylocal.png";
+import imageErigo from "../../../assets/ImageThumbnailErigo.png";
+import imageBegor from "../../../assets/ImageThumbnailBegor.png";
+import imageJokopi from "../../../assets/ImageThumbnailJokopi.png";
 
 function Title() {
   return (
@@ -17,15 +17,19 @@ function Title() {
       className="content-stretch flex items-end justify-between not-italic relative shrink-0 text-[#111928] w-full whitespace-pre-wrap"
       data-name="Title"
     >
-      <p className="capitalize leading-[1.4] relative shrink-0 text-[40px] tracking-[-1px]"
-      style={{ fontFamily: "'Satoshi', sans-serif", fontWeight: 500 }}>
+      <p
+        className="capitalize leading-[1.4] relative shrink-0 text-[40px] tracking-[-1px]"
+        style={{ fontFamily: "'Satoshi', sans-serif", fontWeight: 500 }}
+      >
         Cerita di Balik <br></br>Pertumbuhan
       </p>
-      <p className="leading-[1.5] relative shrink-0 text-[18px] w-[480px]"
-      style={{ fontFamily: "'Satoshi', sans-serif", fontWeight: 400 }}>
-        Pertumbuhan tidak hanya tentang angka, tetapi juga
-        keputusan dan operasional yang harus tetap terkendali.
-        Semua dijalani bersama dengan FLIK.
+      <p
+        className="leading-[1.5] relative shrink-0 text-[18px] w-[480px]"
+        style={{ fontFamily: "'Satoshi', sans-serif", fontWeight: 400 }}
+      >
+        Pertumbuhan tidak hanya tentang angka, tetapi juga keputusan dan
+        operasional yang harus tetap terkendali. Semua dijalani bersama dengan
+        FLIK.
       </p>
     </div>
   );
@@ -51,7 +55,7 @@ function Image() {
       <img
         alt=""
         className="absolute inset-0 max-w-none object-cover size-full transition-transform duration-500 ease-in-out group-hover:scale-110"
-        src={imgImage}
+        src={imageEmados}
       />
     </div>
   );
@@ -67,8 +71,8 @@ function Title1() {
         EMADO'S SHAWARMA
       </p>
       <p className="font-w400 leading-[1.5] relative shrink-0 text-[18px] w-full">
-        Mendukung pembukaan 30+ cabang EMADO'S di seluruh
-        Indonesia dengan operasional yang tetap terkendali.
+        Mendukung pembukaan 30+ cabang EMADO'S di seluruh Indonesia dengan
+        operasional yang tetap terkendali.
       </p>
     </div>
   );
@@ -76,10 +80,7 @@ function Title1() {
 
 function ArrowCircleRight() {
   return (
-    <div
-      className="relative shrink-0 size-[36px]"
-      data-name="ArrowCircleRight"
-    >
+    <div className="relative shrink-0 size-[36px]" data-name="ArrowCircleRight">
       <svg
         className="block size-full"
         fill="none"
@@ -139,7 +140,7 @@ function Image1() {
         <img
           alt=""
           className="absolute inset-0 max-w-none object-cover size-full transition-transform duration-500 ease-in-out group-hover:scale-110"
-          src={imgImage9}
+          src={imageErigo}
         />
       </div>
     </div>
@@ -156,8 +157,8 @@ function Title2() {
         ERIGO Apparel
       </p>
       <p className="font-w400 leading-[1.5] relative shrink-0 text-[18px] w-full">
-        Menjaga stok ERIGO sehingga dapat mendorong penjualan
-        hingga 200% di e-commerce dan offline store.
+        Menjaga stok ERIGO sehingga dapat mendorong penjualan hingga 200% di
+        e-commerce dan offline store.
       </p>
     </div>
   );
@@ -165,10 +166,7 @@ function Title2() {
 
 function ArrowCircleRight1() {
   return (
-    <div
-      className="relative shrink-0 size-[36px]"
-      data-name="ArrowCircleRight"
-    >
+    <div className="relative shrink-0 size-[36px]" data-name="ArrowCircleRight">
       <svg
         className="block size-full"
         fill="none"
@@ -237,7 +235,7 @@ function Image2() {
         <img
           alt=""
           className="absolute h-[151.44%] left-[-13.51%] max-w-none top-[-22.07%] w-[113.58%] transition-transform duration-500 ease-in-out group-hover:scale-110"
-          src={imgImage1}
+          src={imageHeylocal}
         />
       </div>
     </div>
@@ -254,8 +252,8 @@ function Title3() {
         Heylocal.id
       </p>
       <p className="font-w400 leading-[1.5] min-w-full relative shrink-0 text-[18px] w-[min-content] whitespace-pre-wrap">
-        Mendukung persediaan stok HEYLOCAL untuk mendukung
-        kelancaran 500.000+ transaksi saat peak season.
+        Mendukung persediaan stok HEYLOCAL untuk mendukung kelancaran 500.000+
+        transaksi saat peak season.
       </p>
     </div>
   );
@@ -263,10 +261,7 @@ function Title3() {
 
 function ArrowCircleRight2() {
   return (
-    <div
-      className="relative shrink-0 size-[36px]"
-      data-name="ArrowCircleRight"
-    >
+    <div className="relative shrink-0 size-[36px]" data-name="ArrowCircleRight">
       <svg
         className="block size-full"
         fill="none"
@@ -322,7 +317,7 @@ function Image3() {
       <img
         alt=""
         className="absolute inset-0 max-w-none object-cover size-full transition-transform duration-500 ease-in-out group-hover:scale-110"
-        src={imgImage2}
+        src={imageBegor}
       />
     </div>
   );
@@ -338,8 +333,8 @@ function Title4() {
         Bebek Goreng Pondok Suryo
       </p>
       <p className="font-w400 leading-[1.5] relative shrink-0 text-[18px] w-full">
-        Mendukung Pondok Suryo menjaga stok bebek premium dan
-        mengoptimalkan anggaran pemasaran hingga 40%.
+        Mendukung Pondok Suryo menjaga stok bebek premium dan mengoptimalkan
+        anggaran pemasaran hingga 40%.
       </p>
     </div>
   );
@@ -347,10 +342,7 @@ function Title4() {
 
 function ArrowCircleRight3() {
   return (
-    <div
-      className="relative shrink-0 size-[36px]"
-      data-name="ArrowCircleRight"
-    >
+    <div className="relative shrink-0 size-[36px]" data-name="ArrowCircleRight">
       <svg
         className="block size-full"
         fill="none"
@@ -423,7 +415,7 @@ function Image4() {
           <img
             alt=""
             className="absolute h-[143.6%] left-[-17.73%] max-w-none top-[-21.83%] w-[135.47%] transition-transform duration-500 ease-in-out group-hover:scale-110"
-            src={imgImage10}
+            src={imageJokopi}
           />
         </div>
       </div>
@@ -441,8 +433,8 @@ function Title5() {
         Jokopi
       </p>
       <p className="font-w400 leading-[1.5] relative shrink-0 text-[18px] w-full">
-        Mendukung Jokopi ekspansi di 3 cabang baru dengan tetap
-        menjaga pasokan bahan baku dan operasional.
+        Mendukung Jokopi ekspansi di 3 cabang baru dengan tetap menjaga pasokan
+        bahan baku dan operasional.
       </p>
     </div>
   );
@@ -450,10 +442,7 @@ function Title5() {
 
 function ArrowCircleRight4() {
   return (
-    <div
-      className="relative shrink-0 size-[36px]"
-      data-name="ArrowCircleRight"
-    >
+    <div className="relative shrink-0 size-[36px]" data-name="ArrowCircleRight">
       <svg
         className="block size-full"
         fill="none"
@@ -514,8 +503,8 @@ function Text5() {
         Uniknya.
       </p>
       <p className="font-w400 leading-[1.5] relative shrink-0 text-[18px] w-full">
-        Dan setiap cerita butuh partner yang tepat untuk berbagi
-        dan bertukar pengalaman.
+        Dan setiap cerita butuh partner yang tepat untuk berbagi dan bertukar
+        pengalaman.
       </p>
     </div>
   );
@@ -605,9 +594,7 @@ export default function MerchantKami() {
       className="bg-white content-stretch flex flex-col items-start relative size-full"
       data-name="Merchant Kami"
     >
-      <Navbar />
       <Body />
-      <Footer />
     </div>
   );
 }

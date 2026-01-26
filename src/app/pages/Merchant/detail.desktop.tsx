@@ -1,19 +1,16 @@
 import { useParams, useNavigate, Link } from "react-router-dom";
-import {
-  merchantStories,
-  MerchantStory,
-} from "/Users/reynalddaffa/Downloads/FLIK MCA Website/src/imports/merchantStories.ts";
+import { merchantStories, MerchantStory } from "./merchantStories";
 
-import Navbar from "/Users/reynalddaffa/Downloads/FLIK MCA Website/src/imports/navbar.tsx";
-import Footer from "/Users/reynalddaffa/Downloads/FLIK MCA Website/src/imports/footer.tsx";
-import CTASection from "/Users/reynalddaffa/Downloads/FLIK MCA Website/src/imports/cta-section.tsx";
+import Navbar from "../../components/navbar";
+import Footer from "../../components/footer";
+import CTASection from "../../components/cta-section";
 
 // Detail images for each merchant
-import imgEmadosDetail from "/Users/reynalddaffa/Downloads/FLIK MCA Website/src/assets/ImageDetailEmados.png";
-import imgErigoDetail from "/Users/reynalddaffa/Downloads/FLIK MCA Website/src/assets/ImageDetailErigo.png";
-import imgHeylocalDetail from "/Users/reynalddaffa/Downloads/FLIK MCA Website/src/assets/ImageDetailHeylocal.png";
-import imgBebekDetail from "/Users/reynalddaffa/Downloads/FLIK MCA Website/src/assets/ImageDetailBegor.png";
-import imgJokopiDetail from "/Users/reynalddaffa/Downloads/FLIK MCA Website/src/assets/ImageDetailJokopi.png";
+import imgEmadosDetail from "../../../assets/ImageDetailEmados.png";
+import imgErigoDetail from "../../../assets/ImageDetailErigo.png";
+import imgHeylocalDetail from "../../../assets/ImageDetailHeylocal.png";
+import imgBebekDetail from "../../../assets/ImageDetailBegor.png";
+import imgJokopiDetail from "../../../assets/ImageDetailJokopi.png";
 
 // Map of merchant slugs to their detail images
 const merchantDetailImages: Record<string, string> = {
@@ -30,7 +27,10 @@ function Title({ merchant }: { merchant: MerchantStory }) {
       className="content-stretch flex items-end justify-between not-italic relative shrink-0 text-[#111928] w-full"
       data-name="Title"
     >
-      <p className="capitalize flex-[1_0_0] font-['Satoshi:Medium',sans-serif] leading-[1.2] min-h-px min-w-px relative text-[48px] tracking-[-1px]">
+      <p
+        className="capitalize flex-[1_0_0] leading-[1.2] min-h-px min-w-px relative text-[48px] tracking-[-1px]"
+        style={{ fontFamily: "'Satoshi', sans-serif", fontWeight: 500 }}
+      >
         {merchant.name}
       </p>
       {merchant.websiteUrl && (
@@ -38,7 +38,8 @@ function Title({ merchant }: { merchant: MerchantStory }) {
           href={`https://${merchant.websiteUrl}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="decoration-solid font-['Satoshi:Regular',sans-serif] leading-[1.5] relative shrink-0 text-[16px] tracking-[1px] underline text-[#111928] hover:text-[#701bc1] transition-colors duration-300"
+          className="decoration-solid leading-[1.5] relative shrink-0 text-[16px] tracking-[1px] underline text-[#111928] hover:text-[#701bc1] transition-colors duration-300"
+          style={{ fontFamily: "'Satoshi', sans-serif", fontWeight: 400 }}
         >
           {merchant.websiteUrl}
         </a>
@@ -61,7 +62,10 @@ function HeadlineContainer({ headline }: { headline: string }) {
               data-name="Divider"
             />
           </div>
-          <p className="flex-[1_0_0] font-['Satoshi:Medium',sans-serif] leading-[1.5] min-h-px min-w-px not-italic relative text-[#111928] text-[22px] tracking-[-0.56px]">
+          <p
+            className="flex-[1_0_0] leading-[1.5] min-h-px min-w-px not-italic relative text-[#111928] text-[22px] tracking-[-0.56px]"
+            style={{ fontFamily: "'Satoshi', sans-serif", fontWeight: 500 }}
+          >
             {headline}
           </p>
         </div>
@@ -70,23 +74,20 @@ function HeadlineContainer({ headline }: { headline: string }) {
   );
 }
 
-function StoryContent({
-  paragraphs,
-}: {
-  paragraphs: string[];
-}) {
+function StoryContent({ paragraphs }: { paragraphs: string[] }) {
   return (
     <div
       className="content-stretch flex items-end relative shrink-0 w-full"
       data-name="Title"
     >
-      <div className="flex-[1_0_0] font-['Satoshi:Regular',sans-serif] leading-[1.7] min-h-px min-w-px not-italic relative text-[#111928] text-[18px]">
+      <div
+        className="flex-[1_0_0] leading-[1.7] min-h-px min-w-px not-italic relative text-[#111928] text-[18px]"
+        style={{ fontFamily: "'Satoshi', sans-serif", fontWeight: 400 }}
+      >
         {paragraphs.map((paragraph, index) => (
           <p
             key={index}
-            className={
-              index < paragraphs.length - 1 ? "mb-[25px]" : ""
-            }
+            className={index < paragraphs.length - 1 ? "mb-[25px]" : ""}
           >
             {paragraph}
           </p>
@@ -107,10 +108,7 @@ function Detail({ merchant }: { merchant: MerchantStory }) {
       <Title merchant={merchant} />
       <HeadlineContainer headline={merchant.headline} />
       {imageSrc && (
-        <div
-          className="h-[604px] relative shrink-0 w-full"
-          data-name="Image"
-        >
+        <div className="h-[604px] relative shrink-0 w-full" data-name="Image">
           <img
             alt={merchant.name}
             className="absolute inset-0 max-w-none object-cover pointer-events-none size-full rounded-[12px]"
@@ -147,9 +145,7 @@ export default function MerchantDetailPage() {
   const navigate = useNavigate();
 
   // Find the merchant story by slug
-  const merchant = merchantStories.find(
-    (story) => story.slug === slug,
-  );
+  const merchant = merchantStories.find((story) => story.slug === slug);
 
   // If merchant not found, redirect to merchant list page
   if (!merchant) {
@@ -164,7 +160,7 @@ export default function MerchantDetailPage() {
             Merchant yang Anda cari tidak tersedia.
           </p>
           <button
-            onClick={() => navigate("/merchant-kami")}
+            onClick={() => navigate("/merchant")}
             className="bg-[#701bc1] content-stretch flex h-[64px] items-center justify-center px-[20px] py-[16px] relative rounded-[10px] shrink-0 w-[250px] transition-colors duration-300 hover:bg-[#4A1280] cursor-pointer"
           >
             <p className="font-['Satoshi:Medium',sans-serif] leading-[1.5] not-italic relative shrink-0 text-[16px] text-white">
@@ -183,9 +179,7 @@ export default function MerchantDetailPage() {
       className="bg-white content-stretch flex flex-col items-start relative size-full"
       data-name={merchant.name}
     >
-      <Navbar />
       <Body merchant={merchant} />
-      <Footer />
     </div>
   );
 }
