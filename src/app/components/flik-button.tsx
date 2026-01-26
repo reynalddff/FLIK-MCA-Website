@@ -8,14 +8,10 @@ type ButtonProps = {
   to: string;
 };
 
-export default function Button({
-  variant,
-  label,
-  to,
-}: ButtonProps) {
+export default function Button({ variant, label, to }: ButtonProps) {
   const baseClasses = `
     flex flex-[1_0_0]
-    h-[70px]
+    h-[60px]
     relative
     rounded-[10px]
     cursor-pointer
@@ -58,10 +54,10 @@ export default function Button({
             className={`
               leading-[1.5]
               not-italic
-              text-[18px]
+              text-[16px]
               whitespace-pre
             `}
-            style={{fontFamily: "'Satoshi', sans-serif", fontWeight: 500}}
+            style={{ fontFamily: "'Satoshi', sans-serif", fontWeight: 400 }}
           >
             {label}
           </p>

@@ -1,0 +1,559 @@
+/* LandingPage - Homepage */
+.gap-mobile {
+  gap: 40px;
+}
+
+.container-home-mobile {
+  gap: 20px;
+}
+.content {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  text-align: left;
+  font-size: 30px;
+  color: #111928;
+  font-family: Satoshi;
+}
+.heroTitle {
+  align-self: stretch;
+  position: relative;
+  letter-spacing: -1px;
+  line-height: 140%;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+.heroDescriptionContainer {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  font-size: 16px;
+}
+.heroDescription {
+  align-self: stretch;
+  position: relative;
+  letter-spacing: -0.01em;
+  line-height: 160%;
+}
+.merchantSection {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  text-align: left;
+  font-size: 22px;
+  font-weight: 500;
+  color: #fff;
+  font-family: Satoshi;
+}
+.contentImage1 {
+  align-self: stretch;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)),
+    url("../assets/ImageThumbnailEmados.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.text {
+  align-self: stretch;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 24px;
+  gap: 20px;
+}
+.contentDescriptionContainer {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.contentDescription {
+  align-self: stretch;
+  position: relative;
+  letter-spacing: -0.03em;
+  line-height: 130%;
+}
+.contentImage2 {
+  align-self: stretch;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)),
+    url("../assets/ImageThumbnailHeylocal.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.contentImage3 {
+  align-self: stretch;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)),
+    url("../assets/ImageThumbnailErigo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+.contentImage4 {
+  align-self: stretch;
+  height: 320px;
+  background-color: #701bc1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.buttons {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: #fff;
+  /* height: 120px; */
+}
+
+/* About / Tentang FLIK */
+.hero-about {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+  max-width: 1080px;
+  text-align: left;
+  font-size: 30px;
+  color: #111928;
+  font-family: Satoshi;
+}
+.melaluiPendekatanYang {
+  align-self: stretch;
+  position: relative;
+  letter-spacing: -1px;
+  line-height: 140%;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+.berangkatDariPemahaman {
+  align-self: stretch;
+  position: relative;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  line-height: 160%;
+}
+.description-about {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 1080px;
+  text-align: left;
+  font-size: 16px;
+  color: #111928;
+  font-family: Satoshi;
+}
+.images-about {
+  width: 100%;
+  height: 640px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+.image-tentang-FLIK-1 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+  background-image: url("../assets/TentangFLIK-01.png");
+}
+.image-tentang-FLIK-2 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+  background-image: url("../assets/TentangFLIK-02.png");
+}
+.image-tentang-FLIK-3 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+  background-image: url("../assets/TentangFLIK-03.png");
+}
+
+.description-about-text {
+  align-self: stretch;
+  display: flex;
+  align-items: flex-end;
+}
+.flikDibangunDari {
+  flex: 1;
+  position: relative;
+  letter-spacing: -0.01em;
+  line-height: 160%;
+}
+
+.FLIK-key-points-section {
+  width: 100%;
+  position: relative;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1080px;
+  text-align: left;
+  color: #111928;
+  font-family: Satoshi;
+}
+.mcaPageHeroSection1Icon {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 320px;
+  object-fit: cover;
+  background-image: url("../assets/TentangFLIK-04.png");
+}
+.content-FLIK-key-points {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+.FLIK-key-points-title {
+  align-self: stretch;
+  position: relative;
+  font-size: 30px;
+  letter-spacing: -1px;
+  line-height: 140%;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.point {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* CTA SECTION */
+
+.cta {
+  width: 100%;
+  position: relative;
+  border-radius: 20px;
+  background-color: #f3f4f6;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 24px;
+  box-sizing: border-box;
+  gap: 60px;
+  text-align: left;
+  font-size: 30px;
+  color: #111928;
+  font-family: "Satoshi", sans-serif; /* ganti dari Satoshi */
+}
+
+.cta-text {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.ctaTitle {
+  align-self: stretch;
+  position: relative;
+  letter-spacing: -1px;
+  line-height: 140%;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.ctaDescription {
+  align-self: stretch;
+  position: relative;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  line-height: 160%;
+}
+
+.buttonWrap {
+  align-self: stretch;
+}
+
+/* MERCHANT */
+.merchants {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 1080px;
+  text-align: left;
+  font-size: 20px;
+  color: #111928;
+  font-family: Satoshi;
+}
+
+.merchant {
+  width: 100%;
+  position: relative;
+  border-radius: 40px 40px 0px 0px;
+  border: 1px solid #e5e7eb;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  font-size: 20px;
+  color: #111928;
+  font-family: Satoshi;
+}
+.merchant-image-thumbnail {
+  align-self: stretch;
+  height: 320px;
+  width: 100%;
+  min-width: 320px;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.merchant-text-container {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px;
+  gap: 24px;
+}
+.merchant-text {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+.merchant-text-name {
+  align-self: stretch;
+  position: relative;
+  line-height: 135%;
+  font-size: 20px;
+  font-weight: 500;
+}
+.merchant-text-description {
+  align-self: stretch;
+  position: relative;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  line-height: 160%;
+}
+
+/* MERCHANT DETAIL */
+.merchant-detail-content {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 1080px;
+  text-align: left;
+  font-size: 16px;
+  color: #111928;
+  font-family: Satoshi;
+}
+
+.header-content {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  font-size: 14px;
+}
+
+.header-link {
+  position: relative;
+  font-size: 14px;
+  text-decoration: underline;
+  letter-spacing: 1px;
+  line-height: 150%;
+  font-family: Satoshi;
+  color: #111928;
+  text-align: left;
+}
+
+.header-merchant-name {
+  position: relative;
+  font-size: 30px;
+  letter-spacing: -1px;
+  line-height: 140%;
+  text-transform: capitalize;
+  font-weight: 500;
+  font-family: Satoshi;
+  color: #111928;
+  text-align: left;
+}
+
+.highlight-content {
+  width: 100%;
+  position: relative;
+  background-color: #f3f4f6;
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  box-sizing: border-box;
+  gap: 24px;
+  text-align: left;
+  font-size: 16px;
+  color: #111928;
+  font-family: Satoshi;
+}
+
+.divider {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background-color: #111928;
+}
+
+.highlight-content-text {
+  flex: 1;
+  width: 100%;
+  position: relative;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  line-height: 150%;
+  font-weight: 500;
+  font-family: Satoshi;
+  color: #111928;
+  text-align: left;
+  display: inline-block;
+}
+
+.paragraph-content {
+  flex: 1;
+  width: 100%;
+  position: relative;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  line-height: 160%;
+  font-family: Satoshi;
+  color: #111928;
+  text-align: left;
+  display: inline-block;
+  padding-bottom: 20px;
+  font-weight: 00;
+}
+
+/* FOOTER */
+.footer {
+  width: 100%;
+  position: relative;
+  background-color: #fff;
+  border-top: 1px solid #e5e7eb;
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 20px;
+  text-align: left;
+  font-size: 16px;
+  color: #111928;
+  font-family: Satoshi;
+}
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+.logoFlik023 {
+  width: 64px;
+  position: relative;
+  max-height: 100%;
+  object-fit: cover;
+}
+.links {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  /* padding: 0px 2px; */
+  gap: 16px;
+}
+.footerText {
+  position: relative;
+  text-decoration: underline;
+  letter-spacing: -0.01em;
+  line-height: 24px;
+  text-transform: capitalize;
+}
+.footerText4 {
+  position: relative;
+  font-size: 14px;
+  letter-spacing: -0.01em;
+  line-height: 150%;
+}
